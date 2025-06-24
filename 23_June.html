@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            font-weight: 800;
+        }
+        .absolute {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .relative {
+            position: relative;
+            top: 50px;
+            left: 150px;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+        .sticky {
+            position: sticky;
+            top: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="absolute">absolute</div>
+    <div class="relative">relative</div>
+    <div class="fixed">fixed</div>
+    <div class="sticky">sticky</div>
+    <p style="height: 1000px;"></p>
+</body>
+</html>
