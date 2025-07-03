@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
 
-// Beginner Questions 1-10
+// 🟢 Beginner Questions 1-10
 
 // 1. Take a number and check if it's even or odd.
 const number1 = parseInt(prompt("Enter a number to check even or odd:"));
@@ -98,3 +98,104 @@ if (temperature > 30) {
 } else {
     console.log("Cold");
 }
+
+
+// 🟡 Intermediate Level (11–20)
+
+// 11. Input three numbers and find the greatest among them.
+
+const num1 = parseInt(prompt("Enter first number:"));
+const num2 = parseInt(prompt("Enter second number:"));
+const num3 = parseInt(prompt("Enter third number:"));
+if (num1 > num2 && num1 > num3) {
+    console.log("Greatest number is:", num1);
+} else if (num2 > num1 && num2 > num3) {
+    console.log("Greatest number is:", num2);
+} else {
+    console.log("Greatest number is:", num3);
+}
+
+// 12. Input a year and check if it is a leap year.
+
+const num4 = parseInt(prompt("Enter a year to check if it's a leap year:"));
+if(num4 % 4 === 0 && (num4 % 100 !== 0 || num4 % 400 === 0)) {
+    console.log("Leap year");
+}else{
+    console.log("It is not a leap year")
+}
+
+// 13. Input a character and check if it's uppercase, lowercase, digit, or special character.
+
+const num5 = prompt("Enter the character to check if it is a uppercase, lowercase, digit or special character")
+if(num5.match(/[A-Z]/)) {
+    console.log("Uppercase");
+}else if(num5.match(/[a-z]/)) {
+    console.log("Lowercase");
+}else if(num5.match(/[0-9]/)) {
+    console.log("Digit");
+}else{
+    console.log("Special Character");
+}
+
+// 14. Input marks of a student (out of 100) and print the grade:
+
+const marks = parseInt(prompt("Enter marks of the student (out of 100):"));
+if(marks >= 90){
+    console.log("Grade A");
+}else if(marks >= 75){
+    console.log("Grade B");
+}else if(marks >= 60){
+    console.log("Grade C");
+}else if(marks >= 40){
+    console.log("Grade D");
+}else{
+    console.log("Grade F");
+}
+
+// 15. Input the day number (1–7) and print the corresponding weekday.
+
+const dayNumber = parseInt(prompt("Enter the day number (1-7) : 1 = Monday and 7 = Sunday:"));
+if (dayNumber === 1) {
+    console.log("Monday");
+} else if (dayNumber === 2) {
+    console.log("Tuesday");
+} else if (dayNumber === 3) {
+    console.log("Wednesday");
+} else if (dayNumber === 4) {
+    console.log("Thursday");
+} else if (dayNumber === 5) {
+    console.log("Friday");
+} else if (dayNumber === 6) {
+    console.log("Saturday");
+} else if (dayNumber === 7) {
+    console.log("Sunday");
+} else {
+    console.log("Invalid day number");
+}
+
+// 16. Take a number and check whether it is divisible by both 5 and 11.
+
+const number9 = parseInt(prompt("Enter a number to check if it's divisible by both 5 and 11:"));
+if (number9 % 5 === 0 && number9 % 11 === 0) {
+    console.log("Divisible by both 5 and 11");
+} else {
+    console.log("Not divisible by both 5 and 11");
+}
+
+// 17. Input a number and check if it is a prime number (basic logic).
+
+const number10 = parseInt(prompt("Enter a number to check if it's a prime number:"));
+
+if (number10 <= 1) {
+    console.log(number10 + " is not a prime number.");
+} else if( number10 >= 2) {
+    for (let i = 2; i < number10; i++) {
+        if (number10 % i === 0) {
+            console.log(number10 + " is not a prime number.");
+            break;
+        }
+    }
+} else {
+    console.log(number10 + " is a prime number.");
+}
+

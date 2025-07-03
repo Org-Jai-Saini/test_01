@@ -1,60 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+  <meta charset="UTF-8">
+  <title>Dropdown Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .dropdown-menu {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e8ebf0;
+    }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
+    nav {
+      background-color: #2980b9;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    nav .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
+    }
 
-        .dropdown-items {
-            color: black;
-            width: 160px;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+    }
 
-        .dropdown-items:hover {
-            background-color: #f1f1f1;
-        }
-    </style>
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: white;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    nav ul li:hover > a {
+      background-color: #34495e;
+    }
+
+    nav ul li ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      min-width: 180px;
+      z-index: 100;
+    }
+
+    nav ul li:hover > ul {
+      display: flex;
+    }
+
+    nav ul li ul li {
+      position: relative;
+    }
+
+    nav ul li ul li ul {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      display: none;
+    }
+
+    nav ul li ul li:hover > ul {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div class="dropdown">
-        <button class="dropdown-menu">DropDown-List</button>
-        <div class="dropdown-content">
-            <button class="dropdown-items">Item 1</button>
-            <button class="dropdown-items">Item 2</button>
-            <button class="dropdown-items">Item 3</button>
-            <button class="dropdown-items">Item 4</button>
-            <button class="dropdown-items">Item 5</button>
-        </div>
-    </div>
+
+  <nav>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="Logo" class="logo">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Work</a>
+        <ul>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Development</a></li>
+          <li>
+            <a href="#">Photography</a>
+            <ul>
+              <li><a href="#">Nature</a></li>
+              <li><a href="#">People</a></li>
+              <li><a href="#">Pets</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Writing</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
 </body>
 </html>
